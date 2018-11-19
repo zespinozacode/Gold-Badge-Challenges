@@ -13,13 +13,6 @@ namespace Challenge_2
             ClaimRepository claimRepo = new ClaimRepository();
             Queue<Claims> claimQueue = claimRepo.ReturnClaims();
 
-            Claims Zach = new Claims(1, ClaimTypes.Vehicle, "Collision on State Road 37", "11/09/2018", "11/12/2018", 1000.00m, true);
-            Claims Chris = new Claims(2, ClaimTypes.Home, "Strong hail damaged roof", "01/21/2017", "10/24/2018", 400.00m, false);
-            Claims Derek = new Claims(3, ClaimTypes.Theft, "Home invader resulted in stolen property", "07/02/2018", "07/30/2018", 5000.00m, true);
-            claimRepo.AddClaimsToQueue(Zach);
-            claimRepo.AddClaimsToQueue(Chris);
-            claimRepo.AddClaimsToQueue(Derek);
-
             bool isRunning = true;
             while(isRunning)
             {

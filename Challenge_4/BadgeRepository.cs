@@ -15,14 +15,7 @@ namespace Challenge_4
         {
             badgePairs.Add(badge.BadgeID, badge.Door);
         }
-
-        public void NewBadge(List<Badge> badges)
-        {
-            foreach (Badge badge in badges)
-            {
-                badgePairs.Add(badge.BadgeID, badge.Door);
-            }
-        }
+      
 
         public Dictionary<int, List<string>> GetBadges()
         {

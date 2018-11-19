@@ -9,11 +9,11 @@ namespace Challenge_4
     class ProgramUI
     {
         public BadgeRepository badgeRepo = new BadgeRepository();
-        bool running = true;
+        bool isRunning = true;
 
         public void Run()
         {
-            while (running)
+            while (isRunning)
             {
                 int badgeID;
                 string input = Menu();
@@ -58,13 +58,13 @@ namespace Challenge_4
                         }
                         break;
                     case "2":
-                        Console.WriteLine("\nWhat is the id of the badge you'd like to update?");
+                        Console.WriteLine("What is the ID of the badge you'd like to update?");
                         badgeID = int.Parse(Console.ReadLine());
 
                         if (badges.Keys.Contains(badgeID))
                         {
-                            bool isRunning = true;
-                            while (isRunning)
+                            bool keyLoop = true;
+                            while (keyLoop)
                             {
                                 Console.WriteLine($"\nBadge {badgeID} can access the following doors: ");
                                 badges[badgeID].ForEach(i => Console.Write($"{i},  "));
@@ -76,21 +76,21 @@ namespace Challenge_4
                                 switch (doorInput)
                                 {
                                     case "1":
-                                        isRunning = false;
+                                        keyLoop = false;
                                         Console.WriteLine("\nSelect a door to remove.");
                                         string remove = Console.ReadLine();
                                         badges[badgeID].Remove(remove);
                                         Console.Clear();
                                         break;
                                     case "2":
-                                        isRunning = false;
+                                        keyLoop = false;
                                         Console.WriteLine("\nAdd a door number for access");
                                         string add = Console.ReadLine();
                                         badges[badgeID].Add(add);
                                         Console.Clear();
                                         break;
                                     case "3":
-                                        isRunning = false;
+                                        keyLoop = false;
                                         Console.Clear();
                                         break;
                                     default:
@@ -116,21 +116,18 @@ namespace Challenge_4
                         }
                         break;
                     case "4":
-                        running = false;
+                        isRunning = false;
                         break;
                     default:
                         break;
                 }
             }
         }
-
-
-
         public string Menu()
         {
-            Console.WriteLine($"\nHello Security Admin, What would you like to do?\n" +
+            Console.WriteLine($"Hello Security Admin, What would you like to do?\n" +
                 "\n" +
-                "1.  Add new Badge\r\n" +
+                "1. Add new Badge\r\n" +
                 "2. Edit existing Badge\n" +
                 "3. View all Badges\n" +
                 "4. Exit\n");

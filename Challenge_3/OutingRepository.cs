@@ -18,15 +18,7 @@ namespace Challenge_3
         public void AddOutings(Outing outing)
         {
             _outings.Add(outing);
-        }
-
-        public void AddOutings(List<Outing> outings)
-        {
-            foreach (Outing outing in outings)
-            {
-                _outings.Add(outing);
-            }
-        }
+        }       
 
         public decimal TotalCost(List<Outing> outings)
         {

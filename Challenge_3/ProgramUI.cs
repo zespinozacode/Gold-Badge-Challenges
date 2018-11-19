@@ -11,8 +11,8 @@ namespace Challenge_3
         public Outing AddOuting()
         {
             EventTypes eventType = new EventTypes();
-            bool typeOfEvent = true;
-            while (typeOfEvent)
+            bool eventLoop = true;
+            while (eventLoop)
             {
                 Console.WriteLine("Select Event Type\n" +
                     "1. Golf\n" +
@@ -25,22 +25,22 @@ namespace Challenge_3
                 {
                     case "1":
                         eventType = EventTypes.Golf;
-                        typeOfEvent = false;
+                        eventLoop = false;
                         Console.Clear();
                         break;
                     case "2":
                         eventType = EventTypes.Bowling;
-                        typeOfEvent = false;
+                        eventLoop = false;
                         Console.Clear();
                         break;
                     case "3":
                         eventType = EventTypes.Park;
-                        typeOfEvent = false;
+                        eventLoop = false;
                         Console.Clear();
                         break;
                     case "4":
                         eventType = EventTypes.Concert;
-                        typeOfEvent = false;
+                        eventLoop = false;
                         Console.Clear();
                         break;
                     default:
@@ -60,8 +60,7 @@ namespace Challenge_3
         public string Menu()
         {
             Console.WriteLine("Select an option:\n" +
-                "\n" +
-                "1. See all outings\n" +
+                "\n1. See all outings\n" +
                 "2. Add an outing\n" +
                 "3. Calculate costs\n" +
                 "4. Exit\n");

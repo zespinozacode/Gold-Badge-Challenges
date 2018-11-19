@@ -14,15 +14,15 @@ namespace Challenge_6
             switch (carType)
             {
                 case CarTypes.Electric:
-                    List<Car> elecCars = new List<Car>();
+                    List<Car> electricCars = new List<Car>();
                     foreach (Car car in _carList)
                     {
                         if (car.CarType == CarTypes.Electric)
                         {
-                            elecCars.Add(car);
+                            electricCars.Add(car);
                         }
                     }
-                    return elecCars;
+                    return electricCars;
                 case CarTypes.Hybrid:
                     List<Car> hybridCars = new List<Car>();
                     foreach (Car car in _carList)
@@ -53,13 +53,6 @@ namespace Challenge_6
         public void AddCar(Car car)
         {
             _carList.Add(car);
-        }
-        public void AddCar(List<Car> cars)
-        {
-            foreach (Car car in cars)
-            {
-                _carList.Add(car);
-            }
         }
 
         public void RemoveCar(Car car)

@@ -45,10 +45,9 @@ namespace Challenge_5
                 }
             }
         }
-
         public string ConsoleMenu()
         {
-            Console.WriteLine("\nWelcome administrator, what would you like to do today?\n" +
+            Console.WriteLine("Welcome administrator, what would you like to do today?\n" +
                 "\n" +
                 "1. Add new Customer\n" +
                 "2. Edit existing Customer information\n" +
@@ -59,7 +58,6 @@ namespace Challenge_5
             Console.Clear();
             return input;
         }
-
         public void GetCustomer(string lastName)
         {
             Console.Clear();
@@ -96,7 +94,6 @@ namespace Challenge_5
                 Console.Clear();
             }
         }
-
         public string GetEmail(CustomerType customerInput)
         {
             switch (customerInput)
@@ -111,12 +108,11 @@ namespace Challenge_5
                     return "This is an error.";
             }
         }
-
         public void AddCustomer()
         {
             Console.Clear();
             bool addLoop = true;
-            Console.WriteLine("\nEnter the Customer's First Name:\t");
+            Console.WriteLine("Enter the Customer's First Name:\t");
             string firstName = Console.ReadLine();
             Console.WriteLine("\nEnter the Customer's Last Name:\t");
             string lastName = Console.ReadLine();
@@ -167,7 +163,6 @@ namespace Challenge_5
             }
 
         }
-
         public void ViewCustomers()
         {
             List<Customer> customers = customerRepo.ReturnCustomers();
@@ -180,7 +175,6 @@ namespace Challenge_5
                 Console.WriteLine(customer);
             }
         }
-
         public void EditCustomer(string lastName)
         {
             Console.Clear();

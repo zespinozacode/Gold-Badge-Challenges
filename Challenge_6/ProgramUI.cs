@@ -38,7 +38,7 @@ namespace Challenge_6
 
         public string ConsoleMenu()
         {
-            Console.WriteLine("\nWhat would you like to do?\n" +
+            Console.WriteLine("What would you like to do?\n" +
                 "\n" +
                 "1. Add new Car\n" +
                 "2. Edit existing Car information\n" +
@@ -52,7 +52,7 @@ namespace Challenge_6
         public void CreateCar()
         {
             Console.Clear();
-            Console.WriteLine("\nWhat type of car is this?\n" +
+            Console.WriteLine("What type of car is this?\n" +
                 "1. Electric\n" +
                 "2. Hybrid\n" +
                 "3. Gas\n" +
@@ -78,7 +78,7 @@ namespace Challenge_6
         public void EditCar()
         {
             Console.Clear();
-            Console.WriteLine("\nWhat type of car is this?\n" +
+            Console.WriteLine("What type of car is this?\n" +
                 "1. Electric\n" +
                 "2. Hybrid\n" +
                 "3. Gas\n" +
@@ -133,11 +133,10 @@ namespace Challenge_6
                 Console.Read();
             }
         }
-
         public void ViewCar()
         {
             Console.Clear();
-            Console.WriteLine("\nWhat type of car is this?\n" +
+            Console.WriteLine("What type of car is this?\n" +
                 "1. Electric\n" +
                 "2. Hybrid\n" +
                 "3. Gas\n" +
@@ -170,7 +169,6 @@ namespace Challenge_6
                 }
             }
         }
-
         public void ViewTypeCars()
         {
             Console.Clear();
@@ -197,13 +195,11 @@ namespace Challenge_6
                 Console.Clear();
             }
         }
-
-        public void UpdateCar(Car editCar, int editChoice1to6)
+        public void UpdateCar(Car editCar, int editCaseInt)
         {
-            switch (editChoice1to6)
+            switch (editCaseInt)
             {
                 case 1:
-                    //--Edit Make
                     carRepo.RemoveCar(editCar);
                     Console.WriteLine("Enter the new Make:");
                     string make = Console.ReadLine();
@@ -213,7 +209,6 @@ namespace Challenge_6
                     carRepo.AddCar(editCar);
                     break;
                 case 2:
-                    //--Edit Model
                     carRepo.RemoveCar(editCar);
                     Console.WriteLine("Enter the new Model:");
                     string model = Console.ReadLine();
@@ -223,7 +218,6 @@ namespace Challenge_6
                     carRepo.AddCar(editCar);
                     break;
                 case 3:
-                    //--Edit Year
                     carRepo.RemoveCar(editCar);
                     Console.WriteLine("Enter the new Year:");
                     int year = int.Parse(Console.ReadLine());
@@ -233,7 +227,6 @@ namespace Challenge_6
                     carRepo.AddCar(editCar);
                     break;
                 case 4:
-                    //--Edit MPG
                     carRepo.RemoveCar(editCar);
                     Console.WriteLine("Enter the new MPG:");
                     decimal mpg = decimal.Parse(Console.ReadLine());
@@ -243,8 +236,7 @@ namespace Challenge_6
                     carRepo.AddCar(editCar);
                     break;
                 case 5:
-                    //--Edit Type
-                    Console.WriteLine("\nWhat new type of car is this?\n" +
+                    Console.WriteLine("What new type of car is this?\n" +
                         "1. Electric\n" +
                         "2. Hybrid\n" +
                         "3. Gas\n" +
@@ -262,7 +254,6 @@ namespace Challenge_6
 
                     break;
                 case 6:
-                    //--Delete Car
                     Console.WriteLine("Are you sure?\n" +
                         "y/n\n");
                     string answer = Console.ReadLine();
@@ -280,7 +271,6 @@ namespace Challenge_6
                 default:
                     break;
             }
-
         }
     }
 }

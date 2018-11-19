@@ -44,12 +44,11 @@ namespace Challenge_1
                         Console.WriteLine("Goodbye!");
                         break;
                     default:
-                        Console.WriteLine("INVALID RESPONSE");
+                        Console.WriteLine("Error");
                         break;
                 }
             }
         }
-
         private void CreateMeal()
         {
             Console.Clear();
@@ -71,7 +70,6 @@ namespace Challenge_1
 
             menuRepository.AddItemsToMenu(newMeal);
         }
-
         private void DeleteMeal()
         {
             Console.Clear();
@@ -102,19 +100,5 @@ namespace Challenge_1
                 Console.ReadLine();
                 Console.Clear();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

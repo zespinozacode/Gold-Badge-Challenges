@@ -18,16 +18,6 @@ namespace Challenge_5
         public void AddToList(Customer customer)
         {
             customerList.Add(customer);
-        }
-
-        public void AddToList(List<Customer> customers)
-        {
-            foreach (Customer customer in customers)
-            {
-                customerList.Add(customer);
-            }
-        }
-
-        
+        }                
     }
 }

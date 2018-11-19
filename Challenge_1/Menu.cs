@@ -22,7 +22,6 @@ namespace Challenge_1
             MealDescription = description;
             MealIngredients = ingredients;
         }
-
         public Menu()
         {
 
