@@ -82,6 +82,8 @@ namespace Challenge_2
 
                         claimRepo.AddClaimsToQueue(claimType);
                         break;
+                        
+                        //--come back to this!!
                 }
 
             }
